@@ -5,13 +5,12 @@ public class multiplicacion_matrices
     int[][] matrixA;
     int[][] matrixB;
     int[][] resultMatrix;
-    int size;
+    int size= 3;
 
     public multiplicacion_matrices(int[][] matrixA, int[][] matrixB) 
     {
         this.matrixA = matrixA;
         this.matrixB = matrixB;
-        this.size = matrixA.length;
         this.resultMatrix = new int[size][size];
     }
 
@@ -29,7 +28,6 @@ public class multiplicacion_matrices
 
     public void printResultMatriz() 
     {
-        System.out.println("Matriz Resultante:");
         for (int i = 0; i < size; i++) 
         {
             for (int j = 0; j < size; j++) 
@@ -58,5 +56,6 @@ public class multiplicacion_matrices
         multiplicacion_matrices multiplicacion = new multiplicacion_matrices(matrixA, matrixB);
         multiplicacion.mulMatrices();
         multiplicacion.printResultMatriz();
+        System.out.println("hola");
     }
 }
