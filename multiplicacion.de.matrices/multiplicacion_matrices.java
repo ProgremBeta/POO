@@ -56,6 +56,5 @@ public class multiplicacion_matrices
         multiplicacion_matrices multiplicacion = new multiplicacion_matrices(matrixA, matrixB);
         multiplicacion.mulMatrices();
         multiplicacion.printResultMatriz();
-        System.out.println("hola");
     }
 }
