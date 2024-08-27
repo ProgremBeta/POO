@@ -1,20 +1,11 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package multiplicacion.de.matrices;
 
-/**
- *
- * @author User
- */
 public class multiplicacion_matrices {
     private int[][] matrixA;
     private int[][] matrixB;
     private int[][] resultMatrix;
     private int size;
 
-    // Constructor
     public multiplicacion_matrices(int[][] matrixA, int[][] matrixB) {
         this.matrixA = matrixA;
         this.matrixB = matrixB;
@@ -22,7 +13,6 @@ public class multiplicacion_matrices {
         this.resultMatrix = new int[size][size];
     }
 
-    // Método para la multiplicación de matrices
     public void mulMatrices() {
         for (int i = 0; i < size; i++) {
             for (int j = 0; j < size; j++) {
@@ -33,7 +23,6 @@ public class multiplicacion_matrices {
         }
     }
 
-    // Método para imprimir la matriz resultante
     public void printResultMatriz() {
         System.out.println("Matriz Resultante:");
         for (int i = 0; i < size; i++) {
@@ -44,7 +33,6 @@ public class multiplicacion_matrices {
         }
     }
 
-    // Método principal
     public static void main(String[] args) {
         int[][] matrixA = {
             {1, 2, 3},
@@ -58,13 +46,10 @@ public class multiplicacion_matrices {
             {3, 2, 1}
         };
 
-        // Crear objeto de la clase MultiplicacionMatrices
         multiplicacion_matrices multiplicacion = new multiplicacion_matrices(matrixA, matrixB);
 
-        // Realizar la multiplicación de matrices
         multiplicacion.mulMatrices();
 
-        // Imprimir la matriz resultante
         multiplicacion.printResultMatriz();
     }
 }
