@@ -18,7 +18,7 @@ public class multiplicacion_matrices {
     public multiplicacion_matrices(int[][] matrixA, int[][] matrixB) {
         this.matrixA = matrixA;
         this.matrixB = matrixB;
-        this.size = matrixA.length; // Asumiendo que ambas matrices son cuadradas y del mismo tamaño.
+        this.size = matrixA.length;
         this.resultMatrix = new int[size][size];
     }
 
