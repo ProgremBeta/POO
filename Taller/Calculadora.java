@@ -1,4 +1,4 @@
-package taller;
+package Taller;
 
 public class Calculadora 
 {    
