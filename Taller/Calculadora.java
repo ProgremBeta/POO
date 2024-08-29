@@ -1,52 +1,42 @@
-package Taller;
+//package Taller;
+
+import java.util.Scanner;
 
 public class Calculadora 
-{    
-    int suma;
-    int resta;
-    int multiplicacion;
-    int division;
-    int numero1;
-    int numero2;
+{
+    static int numero1 = 0;
+    static int numero2 = 0;
+    static float resultado = 0;
     
-    public Calculadora (int suma, int resta, int multiplicacion, int division)
-    {       
-        this.suma = suma;
-        this.resta = resta;
-        this.multiplicacion = multiplicacion;
-        this.division = division;     
-    }
-    
-    public void calcularSuma(int numero1, int numero2)
+    public Calculadora (int numero1,int numero2,float resultado)
     {
-        this.suma = numero1 + numero2;
+        this.numero1 = numero1;
+        this.numero2 = numero2;
+        this.resultado = resultado;
     }
 
-    public void calcularResta(int numero1, int numero2)
+    public static void main(String[] args)
     {
-        this.resta = numero1 - numero2;
-    }
-
-    public void calcularMultiplicacion(int numero1, int numero2)
-    {
-        this.multiplicacion = numero1 * numero2;
-    }
-
-    public void calcularDivision(int numero1, int numero2)
-    {
-        this.division = numero1 / numero2;
-    }
-    
-    public static void main (String [] args)
-    {
-        Calculadora info = new Calculadora(0, 0, 0, 0);
-        info.calcularSuma(5, 5);
-        System.out.println("La suma es:"+info.suma);
-        info.calcularResta(5, 5);
-        System.out.println("La resta es:"+info.resta);
-        info.calcularMultiplicacion(5, 5);
-        System.out.println("La multiplicacion es:"+info.multiplicacion);
-        info.calcularDivision(5, 5);
-        System.out.println("La division es:"+info.division);
+        System.out.println("Ingresa primer numero: ");
+        Scanner num1 = new Scanner(System.in);
+        numero1 = num1.nextInt();
+        
+        System.out.println("Ingresa primer numero: ");
+        Scanner num2 = new Scanner(System.in);
+        numero2 = num2.nextInt();
+        
+        resultado = numero1 + numero2;
+        System.out.println("El resultado de la suma de "+numero1+" y numero "+numero2+" es: "+ resultado);
+        
+        resultado = numero1 - numero2;
+        System.out.println("El resultado de la resta de "+numero1+" y numero "+numero2+" es: "+ resultado);
+        
+        resultado = numero1 * numero2;
+        System.out.println("El resultado de la multiplicacion de "+numero1+" y numero "+numero2+" es: "+ resultado);
+        
+        resultado = numero1 / numero2;
+        System.out.println("El resultado de la division de "+numero1+" y numero "+numero2+" es: "+ resultado);
+        
+        //System.out.println("hola mundo");
     }   
 }
