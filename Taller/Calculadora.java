@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Calculadora 
 {
-    static int numero1;
+     int numero1;
     static int numero2;
     static float resultado;
     
