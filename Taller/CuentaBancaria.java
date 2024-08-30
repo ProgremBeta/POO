@@ -1,40 +1,58 @@
-package Taller;
-
-public class CuentaBancaria 
-{    
-    int numeroCuenta;
-    int saldo;
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package taller;
+import java.util.Scanner;
+/**
+ *
+ * @author User
+ */
+public class CuentaBancaria {
     
-    public CuentaBancaria(int numeroCuenta, int saldo) 
-    {
+    static int numeroCuenta;
+    static int saldo;
+    static int resultado;
+    static int monto;
+    static int numero;
+    
+    public CuentaBancaria(int numeroCuenta, int saldo) {
         this.numeroCuenta = numeroCuenta;
         this.saldo = saldo;
+        this.resultado = resultado;
+        this.monto = monto;
+        this.numero = numero;
     }
-
-    public void deposito (int monto) 
-    {
-        this.saldo = saldo + monto;
-    }
-        
-    public void retiro(int monto)
-    {
-        this.saldo = saldo - monto;
-    } 
-
-    CuentaBancaria()
-    {
-        numeroCuenta = 312121212;
-        saldo = 2000000;
-    }
+    public static void deposito () {
+        System.out.println("Ingrese el dinero a depositar: ");
+        Scanner monto1 = new Scanner (System.in);
+        monto = monto1.nextInt();
+        resultado = saldo + monto;
        
-    public static void main (String [] args)
-    {
-        CuentaBancaria info = new CuentaBancaria();
-        System.out.println("Su numero de cuenta es: "+info.numeroCuenta);
-        System.out.println("Su saldo es: "+info.saldo);
-        info.deposito(1000);
-        System.out.println("Despues de depositar su saldo es: " + info.saldo);
-        info.retiro(0);
-        System.out.println("Despues de retirar su saldo es: " + info.saldo);
+}
+        
+    public static void retiro(){
+        System.out.println("Ingrese el dinero a retirar: ");
+        Scanner monto1 = new Scanner (System.in);
+        monto = monto1.nextInt();
+        resultado = saldo - monto;
+        
+} 
+       
+    public static void main (String [] args){
+        System.out.println("Ingrese el numero de la cuenta: ");
+        Scanner numeroCuenta1 = new Scanner (System.in);
+        numeroCuenta = numeroCuenta1.nextInt();
+        System.out.println("Ingrese 1 si quiere depositar o ingrese 2 si quiere retirar: ");
+        Scanner numero1 = new Scanner (System.in);
+        numero = numero1.nextInt();
+        if(numero == 1){
+            deposito();
+        }
+        else if (numero == 2){
+            retiro();
+    }
+        System.out.println("Su numero de cuenta es: "+numeroCuenta);
+        System.out.println("Su saldo es: "+resultado);
     }
 }
