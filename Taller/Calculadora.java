@@ -4,39 +4,39 @@ import java.util.Scanner;
 
 public class Calculadora 
 {
-     int numero1;
-    static int numero2;
+    static float numero1;
+    static float numero2;
     static float resultado;
     
-    public Calculadora (int numero1,int numero2,float resultado)
+    public Calculadora (float numero1,float numero2,float resultado)
     {
         this.numero1 = numero1;
         this.numero2 = numero2;
         this.resultado = resultado;
     }
 
-    public static  void sumar(int numero1,int numero2)
+    public static  void sumar(float numero1,float numero2)
     {
         resultado = numero1 + numero2;
         System.out.println("El resultado de la suma de "+numero1+" y numero "+numero2+" es: "+ resultado);
         //return resultado;
     }
 
-    public static void restar(int numero1,int numero2)
+    public static void restar(float numero1,float numero2)
     {
         resultado = numero1 - numero2;
         System.out.println("El resultado de la resta de "+numero1+" y numero "+numero2+" es: "+ resultado);
         //return resultado;
     }
 
-    public static void multiplicar(int numero1,int numero2)
+    public static void multiplicar(float numero1,float numero2)
     {
         resultado = numero1 * numero2;
         System.out.println("El resultado de la multiplicacion de "+numero1+" y numero "+numero2+" es: "+ resultado);
         //return resultado;
     }
 
-    public static void dividir(int numero1,int numero2)
+    public static void dividir(float numero1,float numero2)
     {
         resultado = numero1 / numero2;
         System.out.println("El resultado de la division de "+numero1+" y numero "+numero2+" es: "+ resultado);
@@ -57,7 +57,5 @@ public class Calculadora
         restar( numero1, numero2);
         multiplicar(numero1,numero2);
         dividir(numero1,numero2);
-
-        //System.out.println("cambio hecho 4");
     }   
 }
