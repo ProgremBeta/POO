@@ -1,4 +1,4 @@
-//package Taller;
+package Taller;
 import java.util.Scanner;
 
 public class Rectangulo 
@@ -12,13 +12,13 @@ public class Rectangulo
         this.anchoRectangulo = anchoRectangulo; 
     }    
     
-    public void calcularArea (float longitud, float anchoRactangulo)
+    public static void calcularArea (float longitud, float anchoRactangulo)
     {
         float resultado = longitud * anchoRectangulo;
         System.out.println("el area del rectangulo es: "+ resultado);
     }
     
-    public void calcularPerimetro (float longitud,float anchoRectangulo)
+    public static void calcularPerimetro (float longitud,float anchoRectangulo)
     {
         float resultado =  (2*(longitud))+(2*(anchoRectangulo));
         System.out.println("el perimetro del rectangulo es: "+ resultado);
@@ -26,9 +26,11 @@ public class Rectangulo
   
     public static void main (String [] args)
     {
+        System.out.print("Ingrese la longitud: ");
         Scanner Area = new Scanner(System.in);
         longitud = Area.nextFloat();
 
+        System.out.print("Ingrese el ancho del rectangulo: ");
         Scanner Perimetro = new Scanner(System.in);
         anchoRectangulo = Perimetro.nextFloat();
 
