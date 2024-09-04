@@ -16,8 +16,6 @@ public class CrearMatriz
 
 		//Triangulo Superior;
 
-		//Triangulo Inferior;
-
 	}
 
 	public void ImprimirMatriz()
