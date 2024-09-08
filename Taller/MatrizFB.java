@@ -1,7 +1,6 @@
 import java.util.Scanner;
 
 public class CrearMatriz {
-    // Atributos
     static int[][] matriz;
     static int tamaño;
     static int numeroPar = 2; 
