@@ -1,40 +1,54 @@
 import java.util.Scanner;
 
-public class CrearMatriz
-{
-	static int Matriz;
-	static int Tamano;
+public class CrearMatriz {
+    static int[][] matriz;
+    static int tamaño;
+    static int numeroPar = 2; 
+    static int numeroImpar = 1;    
+    static int fib1 = 0, fib2 = 1;
 
-	public CrearMatriz(int Tamano)
-	{
-		this.Tamano=Tamano;
-	}
+    public CrearMatriz(int tamaño) {
+        this.tamaño = tamaño;
+        this.matriz = new int[tamaño][tamaño];
+    }
 
-	public void LlenarMatriz()
-	{
-		//Diagonal Principal;
+    public static void llenarMatriz() {
 
-		//Triangulo Superior;
+        for (int i = 0; i < tamaño; i++) {
+            for (int j = 0; j < tamaño; j++) {
+                if (i == j) {
+                    matriz[i][j] = numeroPar;
+                    numeroPar += 2;
+                } else if (i < j) {
+                    matriz[i][j] = numeroImpar;
+                    numeroImpar += 2;
+                } else {
+                    matriz[i][j] = fib1;
+                    int siguienteFib = fib1 + fib2;
+                    fib1 = fib2;
+                    fib2 = siguienteFib;
+                }
+            }
+        }
+    }
 
-	}
+    public void imprimirMatriz() {
+        for (int i = 0; i < tamaño; i++) {
+            for (int j = 0; j < tamaño; j++) {
+                System.out.print(matriz[i][j] + " ");
+            }
+            System.out.println();        }
+    }
 
-	public void ImprimirMatriz()
-	{
-		for (int i=0; i<Tamano; i++ )
-		{
-			for (int j=0; j<Tamano; j++)
-			{
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
 
-			}
-		}
-	}
+        System.out.print("Ingrese el tamaño de la matriz: ");
+        int tamaño = scanner.nextInt();
 
-	public static void main (String[] args)
-	{
-		Scanner TamanoUsuario =  new Scanner(System.in);
-		Tamano = TamanoUsuario.nextInt();
+        CrearMatriz matriz = new CrearMatriz(tamaño);
 
-		System.out.print(Tamano);
-	}
-
+        llenarMatriz(); 
+        matriz.imprimirMatriz();
+    }
 }
