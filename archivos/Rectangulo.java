@@ -1,4 +1,5 @@
-package Taller;
+//package Taller;
+
 import java.util.Scanner;
 
 public class Rectangulo 
