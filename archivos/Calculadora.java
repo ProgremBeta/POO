@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Calculadora 
 {
-    static float numero8;
+    static float numero1;
     static float numero2;
     static float resultado;
 
