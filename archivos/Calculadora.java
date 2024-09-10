@@ -1,39 +1,55 @@
 package calculadora;
 import java.util.Scanner;
-/**
- *
- * @author User
- */
+
 public class Calculadora {
 
     public int a;
     public int b;
-    public int resultado=0;
+    public int resultado;
     
     public Calculadora (int a, int b)
     {
         this.a = a;
         this.b = b;
     }
-    
-    public static void Multiplicacion(int a, int b, int resultado)
+
+    public int Multiplicacion()
     {
-        resultado=0;
-        for(int i=0; i>b; i++)
+        
+        for(int i=0; i<b; i++)
         {
-            resultado= resultado+a;
+            resultado+=a;
         }
+        return resultado;
+    }
+
+    public int Division()
+    {
+        while(a>=b)
+        {
+          a -= b;
+          resultado++;
+        }
+        
+        return resultado;
     }
     
-    //public static void Division(int a, int b)
-    //{
-    //    resultado= 
-    //}
-            
-    public static void main(String[] args) {
-        System.out.println("Ingresa primer numero: ");
+    public static void main(String [] args) {
+        System.out.println("Ingresa el primer numero: ");
         Scanner num1 = new Scanner(System.in);
-        a = num1.nextInt();
+        int a = num1.nextInt();
+        
+        System.out.println("Ingresa el segundo numero: ");
+        Scanner num2 = new Scanner(System.in);
+        int b = num2.nextInt();
+        
+        Calculadora multiplicacion = new Calculadora (a, b);
+        int resultado = multiplicacion.Multiplicacion();
+        System.out.println(resultado);
+        
+        Calculadora division = new Calculadora (a, b);
+        int resultado1 = division.Division();
+        System.out.println(resultado1);
     }
-    
+
 }
