@@ -1,4 +1,4 @@
-package calculadora;
+//package calculadora;
 import java.util.Scanner;
 
 public class Calculadora {
@@ -35,21 +35,21 @@ public class Calculadora {
     }
     
     public static void main(String [] args) {
-        System.out.println("Ingresa el primer numero: ");
+        System.out.print("Ingresa el primer numero: ");
         Scanner num1 = new Scanner(System.in);
         int a = num1.nextInt();
         
-        System.out.println("Ingresa el segundo numero: ");
+        System.out.print("Ingresa el segundo numero: ");
         Scanner num2 = new Scanner(System.in);
         int b = num2.nextInt();
         
         Calculadora multiplicacion = new Calculadora (a, b);
         int resultado = multiplicacion.Multiplicacion();
-        System.out.println(resultado);
+        System.out.println("La multiplicacion de "+a+" y "+b+" es ="+resultado);
         
         Calculadora division = new Calculadora (a, b);
         int resultado1 = division.Division();
-        System.out.println(resultado1);
+        System.out.println("La division de "+a+" y "+b+" es ="+resultado1);
     }
 
 }
