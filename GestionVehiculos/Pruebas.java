@@ -1,6 +1,6 @@
 package GestionVehiculos
 
-public Vehiculos
+public Pruebas
 {
 	
 }
