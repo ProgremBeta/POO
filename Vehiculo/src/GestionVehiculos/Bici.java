@@ -7,32 +7,33 @@ public class Bici extends Vehiculo
         super(Tipo,Modelo,YearsFabricacion,Color,Disponibilidad);
     }
 
-    public void GetTipo(String Tipo)
+    public String GetTipo()
     {
-        this.Tipo = Tipo;
+        return Tipo;
     }
 
-    public void GetModelo(String Modelo)
+    public String GetModelo()
     {
-        this.Modelo = Modelo;
+        return Modelo;
     }
 
-    public void GetYearsFabricacion(int YearsFabricacion)
+    public int  GetYearsFabricacion()
     {
-        this.YearsFabricacion = YearsFabricacion;
+        return YearsFabricacion;
     }
 
-    public void GetColor(String Color)
+    public String GetColor()
     {
-        this.Color = Color;
+        return Color;
     }
 
-    public void GetDisponibilidad(String Disponibilidad)
-    {
-        this.Disponibilidad = Disponibilidad;
-    }
-    public String SetDisponibilida()
+    public String GetDisponibilidad()
     {
         return Disponibilidad;
+    }
+
+    public void SetDisponibilidad(String Disponibilidad)
+    {
+        this.Disponibilidad = Disponibilidad;
     }
 }
